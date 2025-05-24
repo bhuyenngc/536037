@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http://www.opengroup.org/xsd/archimate/3.0/">
+  <elements xsi:type="model:Node" xsi:id="node1" name="Customer Data Storage"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp1" name="Core Banking Application"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp2" name="Transaction Gateway"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp3" name="User Authentication Service"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp4" name="Access Control Service"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp5" name="Fraud Detection Service"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp6" name="Security Monitoring Service"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp7" name="Policy Decision Point (PDP)"/>
+  <elements xsi:type="model:ApplicationComponent" xsi:id="appcomp8" name="Policy Enforcement Point (PEP)"/>
+  <elements xsi:type="model:ApplicationInterface" xsi:id="iface1" name="API Gateway"/>
+  
+  <!-- Relationships -->
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel1" source="appcomp3" target="appcomp8"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel2" source="appcomp8" target="appcomp2"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel3" source="appcomp2" target="appcomp1"/>
+  <relationships xsi:type="model:AccessRelationship" xsi:id="rel4" source="appcomp1" target="node1"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel5" source="appcomp5" target="appcomp2"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel6" source="appcomp6" target="appcomp1"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel7" source="appcomp6" target="appcomp2"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel8" source="appcomp7" target="appcomp8"/>
+  <relationships xsi:type="model:UsedByRelationship" xsi:id="rel9" source="iface1" target="appcomp2"/>
+</model:Model>
